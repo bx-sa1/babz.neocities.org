@@ -1,0 +1,89 @@
+:root {
+  --link: #7A7A14;
+  --fg: #101003;
+  --bg: #D0D071;
+}
+
+html {
+  font-family: "Roboto";
+  background-image: url("/images/bg.png");
+  animation: bg-slide 5s linear infinite;
+}
+
+body {
+  margin: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; 
+}
+
+a:link {
+  color: var(--fg);
+  font-weight: bolder;
+}
+
+a:visited {
+  color: var(--fg);
+}
+
+a:hover {
+  color: var(--link);
+}
+
+a:active {
+  color: var(--link);
+}
+
+a {
+  text-decoration: none;
+}
+
+header, main, footer{
+  width: 40rem;
+  padding: 16px;
+  color: var(--fg);
+  background-color: var(--bg);
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 16px;
+  flex-flow: row nowrap;
+}
+
+
+.footer-button-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.footer-button-list li {
+  flex: 0 0 20%;
+}
+
+@keyframes bg-slide {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+  100% {
+    background-position-x: 384px;
+    background-position-y: 368px;
+  }
+}
